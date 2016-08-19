@@ -7,6 +7,7 @@ In every docker-machine(vm or real-machine), use following commands to build a s
 #start docker deamon with using consul key-value store 
 docker daemon -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock --cluster-store=consul://${consul.host.ip}:8500 --cluster-advertise=${network-interface}:2375
 
+Steps:
 #start consul (first)
 docker run -d \
     -v /data \
